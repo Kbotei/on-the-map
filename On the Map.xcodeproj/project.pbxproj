@@ -54,14 +54,38 @@
 		CB33687321B4984B0033E4B6 /* On the Map */ = {
 			isa = PBXGroup;
 			children = (
+				CB33688621B498690033E4B6 /* Controllers */,
+				CB33688721B4987F0033E4B6 /* Models */,
+				CB33688821B498900033E4B6 /* Views */,
 				CB33687421B4984B0033E4B6 /* AppDelegate.swift */,
-				CB33687621B4984B0033E4B6 /* ViewController.swift */,
-				CB33687821B4984B0033E4B6 /* Main.storyboard */,
-				CB33687B21B4984C0033E4B6 /* Assets.xcassets */,
-				CB33687D21B4984C0033E4B6 /* LaunchScreen.storyboard */,
 				CB33688021B4984C0033E4B6 /* Info.plist */,
 			);
 			path = "On the Map";
+			sourceTree = "<group>";
+		};
+		CB33688621B498690033E4B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB33687621B4984B0033E4B6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB33688721B4987F0033E4B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB33688821B498900033E4B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB33687821B4984B0033E4B6 /* Main.storyboard */,
+				CB33687B21B4984C0033E4B6 /* Assets.xcassets */,
+				CB33687D21B4984C0033E4B6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
