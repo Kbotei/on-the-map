@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  On the Map
 //
 //  Created by Kbotei on 12/2/18.
