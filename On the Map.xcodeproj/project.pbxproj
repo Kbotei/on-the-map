@@ -17,7 +17,8 @@
 		CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33688D21B4BB8C0033E4B6 /* StudentsTableViewController.swift */; };
 		CB33689221B4BDC40033E4B6 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689121B4BDC40033E4B6 /* ParseClient.swift */; };
 		CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */; };
-		CB33689621B4BE070033E4B6 /* NetworkClientProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689521B4BE070033E4B6 /* NetworkClientProtocal.swift */; };
+		CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689821B5FBB70033E4B6 /* StudentLocation.swift */; };
+		CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689B21B600C70033E4B6 /* ParseResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		CB33688D21B4BB8C0033E4B6 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		CB33689121B4BDC40033E4B6 /* ParseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
-		CB33689521B4BE070033E4B6 /* NetworkClientProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocal.swift; sourceTree = "<group>"; };
+		CB33689821B5FBB70033E4B6 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
+		CB33689B21B600C70033E4B6 /* ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +91,10 @@
 		CB33688721B4987F0033E4B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB33689721B5FB9B0033E4B6 /* Data */,
 				CB33689021B4BDA60033E4B6 /* Udacity Client */,
 				CB33688F21B4BD970033E4B6 /* Parse Client */,
-				CB33689521B4BE070033E4B6 /* NetworkClientProtocal.swift */,
+				CB33689A21B5FCAC0033E4B6 /* Parse Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,6 +123,22 @@
 				CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */,
 			);
 			path = "Udacity Client";
+			sourceTree = "<group>";
+		};
+		CB33689721B5FB9B0033E4B6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CB33689A21B5FCAC0033E4B6 /* Parse Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CB33689821B5FBB70033E4B6 /* StudentLocation.swift */,
+				CB33689B21B600C70033E4B6 /* ParseResponse.swift */,
+			);
+			path = "Parse Responses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,14 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */,
 				CB33689221B4BDC40033E4B6 /* ParseClient.swift in Sources */,
 				CB33687721B4984B0033E4B6 /* LoginViewController.swift in Sources */,
 				CB33688A21B4BAAD0033E4B6 /* InfoPostViewController.swift in Sources */,
+				CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */,
 				CB33687521B4984B0033E4B6 /* AppDelegate.swift in Sources */,
 				CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */,
 				CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */,
 				CB33688C21B4BAD60033E4B6 /* MapViewController.swift in Sources */,
-				CB33689621B4BE070033E4B6 /* NetworkClientProtocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
