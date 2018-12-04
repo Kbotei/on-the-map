@@ -19,6 +19,7 @@
 		CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */; };
 		CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689821B5FBB70033E4B6 /* StudentLocation.swift */; };
 		CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689B21B600C70033E4B6 /* ParseResponse.swift */; };
+		CB3368A121B634B30033E4B6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		CB33689821B5FBB70033E4B6 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		CB33689B21B600C70033E4B6 /* ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResponse.swift; sourceTree = "<group>"; };
+		CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				CB33688621B498690033E4B6 /* Controllers */,
 				CB33688721B4987F0033E4B6 /* Models */,
 				CB33688821B498900033E4B6 /* Views */,
+				CB33689D21B634440033E4B6 /* Extensions */,
 				CB33687421B4984B0033E4B6 /* AppDelegate.swift */,
 				CB33688021B4984C0033E4B6 /* Info.plist */,
 			);
@@ -139,6 +142,14 @@
 				CB33689B21B600C70033E4B6 /* ParseResponse.swift */,
 			);
 			path = "Parse Responses";
+			sourceTree = "<group>";
+		};
+		CB33689D21B634440033E4B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				CB33687721B4984B0033E4B6 /* LoginViewController.swift in Sources */,
 				CB33688A21B4BAAD0033E4B6 /* InfoPostViewController.swift in Sources */,
 				CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */,
+				CB3368A121B634B30033E4B6 /* UIViewController+Alert.swift in Sources */,
 				CB33687521B4984B0033E4B6 /* AppDelegate.swift in Sources */,
 				CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */,
 				CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */,

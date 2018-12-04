@@ -7,13 +7,35 @@
 //
 
 import UIKit
+import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var map: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ParseClient.getStudentLocations(completion: populateStudentLocations(locations:error:))
+    }
+    
+    // MARK: Completion Methods
+    
+    func populateStudentLocations(locations: [StudentLocation], error: Error?) {
+        guard locations.count > 0 else {
+            showAlert(Alerts.GeneralError, message: error?.localizedDescription)
+            return
+        }
+        
+        for location in locations {
+            let point = MKPointAnnotation()
+            point.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            point.title = "\(location.firstName) \(location.lastName)"
+            map.addAnnotation(point)
+        }
     }
     
 
