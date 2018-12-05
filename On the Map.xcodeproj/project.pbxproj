@@ -20,6 +20,8 @@
 		CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689821B5FBB70033E4B6 /* StudentLocation.swift */; };
 		CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689B21B600C70033E4B6 /* ParseResponse.swift */; };
 		CB3368A121B634B30033E4B6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */; };
+		CB3368A321B74AA50033E4B6 /* StudentLocationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */; };
+		CB3368A521B751890033E4B6 /* UdacityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A421B751890033E4B6 /* UdacityResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CB33689821B5FBB70033E4B6 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		CB33689B21B600C70033E4B6 /* ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResponse.swift; sourceTree = "<group>"; };
 		CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResults.swift; sourceTree = "<group>"; };
+		CB3368A421B751890033E4B6 /* UdacityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */,
+				CB3368A421B751890033E4B6 /* UdacityResponse.swift */,
 			);
 			path = "Udacity Client";
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			children = (
 				CB33689821B5FBB70033E4B6 /* StudentLocation.swift */,
 				CB33689B21B600C70033E4B6 /* ParseResponse.swift */,
+				CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */,
 			);
 			path = "Parse Responses";
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 				CB33687521B4984B0033E4B6 /* AppDelegate.swift in Sources */,
 				CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */,
 				CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */,
+				CB3368A321B74AA50033E4B6 /* StudentLocationResults.swift in Sources */,
+				CB3368A521B751890033E4B6 /* UdacityResponse.swift in Sources */,
 				CB33688C21B4BAD60033E4B6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

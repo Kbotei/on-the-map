@@ -15,12 +15,18 @@ class ParseClient { //: NetworkClient {
     enum Endpoints {
         static let base = "https://parse.udacity.com/parse/classes"
         
+        case createLocation
         case studentLocations
+        case updateLocation(String)
         
         var stringValue: String {
             switch self {
-            case .studentLocations:
+            case .createLocation:
                 return Endpoints.base + "/StudentLocation"
+            case .studentLocations:
+                return Endpoints.base + "/StudentLocation?limit=100"
+            case .updateLocation(let objectId):
+                return Endpoints.base + "/StudentLocation/\(objectId)"
             }
         }
         
@@ -30,9 +36,9 @@ class ParseClient { //: NetworkClient {
     // MARK - Network Requests
     
     class func getStudentLocations(completion: @escaping ([StudentLocation], Error?) -> Void) {
-        let task = getRequest(url: Endpoints.studentLocations.url, responseType: [StudentLocation].self) { data, error in
+        let task = getRequest(url: Endpoints.studentLocations.url, responseType: StudentLocationResults.self) { data, error in
             if let data = data {
-                completion(data, nil)
+                completion(data.results, nil)
             } else {
                 completion([], error)
             }
@@ -41,17 +47,36 @@ class ParseClient { //: NetworkClient {
         task.resume()
     }
     
+    class func createStudentLocation(location: StudentLocation, completion: @escaping (Bool, Error?) -> Void) {
+        postRequest(url: Endpoints.createLocation.url, responseType: StudentLocation.self, body: location) { response, error in
+            if let response = response {
+                completion(!response.objectId.isEmpty, nil)
+            } else {
+                completion(false, error)
+            }
+        }
+    }
+    
     // Pull in a few methods from The Movie Manager app.
     class func getRequest<ResponseType: Decodable>(url: URL,
                                                     responseType: ResponseType.Type,
                                                     completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue(applicationId, forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue(apiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 DispatchQueue.main.async {
                     completion(nil, error)
                 }
                 return
             }
+            
+             print(String(data: data, encoding: .utf8)!)
+            
             let decoder = JSONDecoder()
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
@@ -81,6 +106,8 @@ class ParseClient { //: NetworkClient {
                                                                              body: RequestType,
                                                                              completion: @escaping (ResponseType?, Error?) -> Void) {
         var request = URLRequest(url: url)
+        request.addValue(applicationId, forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue(apiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.httpMethod = "POST"
         request.httpBody = try! JSONEncoder().encode(body)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
