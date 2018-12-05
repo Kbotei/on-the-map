@@ -16,7 +16,14 @@ class InfoPostViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logout(_ sender: Any) {
+        UdacityClient.logout { [weak self] success, error in
+            if !success {
+                self?.showAlert("Opps", message: error?.localizedDescription)
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

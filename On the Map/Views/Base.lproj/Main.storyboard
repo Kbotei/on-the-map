@@ -72,16 +72,15 @@
                             <constraint firstItem="E7K-pM-LYG" firstAttribute="top" secondItem="KJS-KN-Okl" secondAttribute="bottom" constant="8" id="0n9-gG-1Mc"/>
                             <constraint firstItem="0Ve-hj-KKq" firstAttribute="width" secondItem="Tig-Ye-sW1" secondAttribute="width" id="2b7-WG-MCN"/>
                             <constraint firstItem="Tig-Ye-sW1" firstAttribute="top" secondItem="E7K-pM-LYG" secondAttribute="bottom" constant="8" id="Eu3-bp-a0Y"/>
+                            <constraint firstItem="y2f-XI-J6k" firstAttribute="leading" secondItem="0Ve-hj-KKq" secondAttribute="leading" constant="18" id="Fbq-Tf-tMo"/>
                             <constraint firstItem="0Ve-hj-KKq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KUd-Cf-qvp"/>
                             <constraint firstItem="E7K-pM-LYG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OWo-m4-BWE"/>
                             <constraint firstItem="pnx-BD-zWR" firstAttribute="leading" secondItem="y2f-XI-J6k" secondAttribute="trailing" constant="8" id="Qe1-55-UgE"/>
-                            <constraint firstItem="0Ve-hj-KKq" firstAttribute="leading" secondItem="y2f-XI-J6k" secondAttribute="trailing" constant="-170" id="WyJ-tF-rLF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y2f-XI-J6k" secondAttribute="bottom" constant="16" id="Xfc-2D-awp"/>
                             <constraint firstItem="KJS-KN-Okl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Zd6-l5-gp6"/>
                             <constraint firstItem="KJS-KN-Okl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJx-QI-RZ5"/>
                             <constraint firstItem="Tig-Ye-sW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fxA-2R-vfC"/>
                             <constraint firstItem="pnx-BD-zWR" firstAttribute="centerY" secondItem="y2f-XI-J6k" secondAttribute="centerY" id="gEe-tU-hXo"/>
-                            <constraint firstItem="pnx-BD-zWR" firstAttribute="leading" secondItem="0Ve-hj-KKq" secondAttribute="trailing" constant="-67" id="haY-lM-4DL"/>
                             <constraint firstItem="y2f-XI-J6k" firstAttribute="top" secondItem="0Ve-hj-KKq" secondAttribute="bottom" constant="14" id="xtJ-Sf-WM1"/>
                             <constraint firstItem="0Ve-hj-KKq" firstAttribute="top" secondItem="Tig-Ye-sW1" secondAttribute="bottom" constant="20" id="ybi-ZV-Did"/>
                             <constraint firstItem="Tig-Ye-sW1" firstAttribute="width" secondItem="E7K-pM-LYG" secondAttribute="width" id="zIH-W7-uLA"/>
@@ -120,7 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="kjx-n8-Wvs"/>
                     </view>
                     <navigationItem key="navigationItem" title="On the Map" id="rUn-Sf-KY7">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="vvK-bj-QC0"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="vvK-bj-QC0">
+                            <connections>
+                                <action selector="logout:" destination="b9H-38-fW9" id="fx0-Az-0Qb"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="brc-XI-mAZ">
                                 <connections>
@@ -172,7 +175,11 @@
                         <viewLayoutGuide key="safeArea" id="9j2-Ff-b4V"/>
                     </view>
                     <navigationItem key="navigationItem" title="On the Map" id="Au6-x5-huI">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="eLN-Qj-S1Z"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="eLN-Qj-S1Z">
+                            <connections>
+                                <action selector="logout:" destination="ROc-MG-aeP" id="NrM-w7-SHy"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="tnw-5r-pwk">
                                 <connections>
@@ -251,6 +258,6 @@
         <image name="UdacityLogo" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DlD-HW-Bkt"/>
+        <segue reference="LhY-2i-RNP"/>
     </inferredMetricsTieBreakers>
 </document>
