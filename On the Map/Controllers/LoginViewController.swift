@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func login(_ sender: Any) {
-        guard let user = email.text, let password = password.text else {
+        guard let user = email.text, let password = password.text, !user.isEmpty, !password.isEmpty else {
             showAlert(Alerts.GeneralError, message: Alerts.LoginEmptyMessage)
             return
         }
