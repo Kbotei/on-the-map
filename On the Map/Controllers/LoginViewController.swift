@@ -24,8 +24,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        emailField.text = nil
-        passwordField.text = nil
+        
         
         
         UdacityClient.login(username: email, password: password) {
@@ -35,6 +34,9 @@ class LoginViewController: UIViewController {
                 self?.showAlert(Alerts.GeneralError, message: error?.localizedDescription)
                 return
             }
+            
+            self?.emailField.text = nil
+            self.?passwordField.text = nil
             
             self?.performSegue(withIdentifier: "pushToMap", sender: nil)
         }

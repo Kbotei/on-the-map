@@ -57,6 +57,8 @@ class ListViewController: UIViewController {
         UdacityClient.logout { [weak self] success, error in
             if !success {
                 self?.showAlert(Alerts.GeneralError, message: error?.localizedDescription)
+            } else {
+                self?.dismiss(animated: true, completion: nil)
             }
         }
     }
