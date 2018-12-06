@@ -21,6 +21,7 @@ extension UIViewController {
         static let LocationEmptyMessage = "Location is empty, please go back and enter a location!"
         static let LocationSearchMessage = "There was an error searching for the location!"
         static let LocationSaveMessage = "Unable to save location, please try again."
+        static let CannotOpenLink = "Unable to open that type of link"
     }
     
     public func showAlert(_ title: String, message: String?) {

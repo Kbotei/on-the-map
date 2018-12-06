@@ -10,8 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,12 +19,16 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func login(_ sender: Any) {
-        guard let user = email.text, let password = password.text, !user.isEmpty, !password.isEmpty else {
+        guard let email = emailField.text, let password = passwordField.text, !email.isEmpty, !password.isEmpty else {
             showAlert(Alerts.GeneralError, message: Alerts.LoginEmptyMessage)
             return
         }
         
-        UdacityClient.login(username: user, password: password) {
+        emailField.text = nil
+        passwordField.text = nil
+        
+        
+        UdacityClient.login(username: email, password: password) {
             [weak self] response, error in
             
             guard error == nil else {

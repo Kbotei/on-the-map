@@ -100,6 +100,8 @@ extension MapViewController: MKMapViewDelegate {
                 let url = URL(string: subtitle),
                 UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                showAlert(Alerts.GeneralError, message: Alerts.CannotOpenLink)
             }
         }
     }

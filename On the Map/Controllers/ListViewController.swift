@@ -99,6 +99,8 @@ extension ListViewController: UITableViewDelegate {
         if let link = location.mediaURL, let url = URL(string: link),
             UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            showAlert(Alerts.GeneralError, message: Alerts.CannotOpenLink)
         }
     }
 }
