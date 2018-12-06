@@ -24,9 +24,6 @@ class LoginViewController: UIViewController {
             return
         }
         
-        
-        
-        
         UdacityClient.login(username: email, password: password) {
             [weak self] response, error in
             
@@ -36,7 +33,7 @@ class LoginViewController: UIViewController {
             }
             
             self?.emailField.text = nil
-            self.?passwordField.text = nil
+            self?.passwordField.text = nil
             
             self?.performSegue(withIdentifier: "pushToMap", sender: nil)
         }
