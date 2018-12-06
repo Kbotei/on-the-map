@@ -62,11 +62,8 @@ class ListViewController: UIViewController {
     }
     
     @IBAction func refreshLocations(_ sender: Any) {
-        getLocations()
+        getLocations(refresh: true)
         tableView.reloadData()
-    }
-    
-    @IBAction func addLocation(_ sender: Any) {
     }
     
 }

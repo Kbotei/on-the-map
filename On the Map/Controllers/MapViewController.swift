@@ -69,7 +69,7 @@ class MapViewController: UIViewController {
     
     @IBAction func refreshLocations(_ sender: Any) {
         map.removeAnnotations(map.annotations)
-        populateLocations()
+        populateLocations(refresh: true)
     }
 }
 
