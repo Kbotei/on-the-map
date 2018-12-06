@@ -15,6 +15,12 @@ extension UIViewController {
         static let DismissAlert = "Dismiss"
         static let GeneralError = "An Error Occurred"
         static let GeneralMessage = "An error occurred, please try again."
+        static let LoginEmptyMessage = "Please enter an email/username and password."
+        static let SignupLinkMessage = "Unable to open signup link"
+        static let LocationRequiredMessage = "Please enter a location."
+        static let LocationEmptyMessage = "Location is empty, please go back and enter a location!"
+        static let LocationSearchMessage = "There was an error searching for the location!"
+        static let LocationSaveMessage = "Unable to save location, please try again."
     }
     
     public func showAlert(_ title: String, message: String?) {

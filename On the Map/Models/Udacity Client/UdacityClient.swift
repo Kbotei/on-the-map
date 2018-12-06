@@ -79,7 +79,7 @@ class UdacityClient {
             
             let range = 5..<data!.count
             
-            guard let resultData = data?.subdata(in: range) else {
+            guard let _ = data?.subdata(in: range) else {
                 DispatchQueue.main.async {
                     completion(false, error)
                 }
@@ -88,17 +88,8 @@ class UdacityClient {
             
             user = nil
             
-            let decoder = JSONDecoder()
-            
-            do {
-                let _ = try decoder.decode(UdacityResponse.self, from: resultData)
-                DispatchQueue.main.async {
-                    completion(true, nil)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    completion(false, error)
-                }
+            DispatchQueue.main.async {
+                completion(true, nil)
             }
         }
         task.resume()

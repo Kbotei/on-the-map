@@ -12,16 +12,19 @@
 		CB33687A21B4984B0033E4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB33687821B4984B0033E4B6 /* Main.storyboard */; };
 		CB33687C21B4984C0033E4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB33687B21B4984C0033E4B6 /* Assets.xcassets */; };
 		CB33687F21B4984C0033E4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB33687D21B4984C0033E4B6 /* LaunchScreen.storyboard */; };
-		CB33688A21B4BAAD0033E4B6 /* InfoPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33688921B4BAAD0033E4B6 /* InfoPostViewController.swift */; };
+		CB33688A21B4BAAD0033E4B6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33688921B4BAAD0033E4B6 /* ListViewController.swift */; };
 		CB33688C21B4BAD60033E4B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33688B21B4BAD60033E4B6 /* MapViewController.swift */; };
 		CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33688D21B4BB8C0033E4B6 /* StudentsTableViewController.swift */; };
 		CB33689221B4BDC40033E4B6 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689121B4BDC40033E4B6 /* ParseClient.swift */; };
 		CB33689421B4BDCF0033E4B6 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */; };
-		CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689821B5FBB70033E4B6 /* StudentLocation.swift */; };
+		CB33689921B5FBB70033E4B6 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689821B5FBB70033E4B6 /* StudentInformation.swift */; };
 		CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB33689B21B600C70033E4B6 /* ParseResponse.swift */; };
 		CB3368A121B634B30033E4B6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */; };
 		CB3368A321B74AA50033E4B6 /* StudentLocationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */; };
 		CB3368A521B751890033E4B6 /* UdacityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A421B751890033E4B6 /* UdacityResponse.swift */; };
+		CB3368A721B8A8380033E4B6 /* LocationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A621B8A8380033E4B6 /* LocationFormViewController.swift */; };
+		CB3368A921B8B1E50033E4B6 /* LocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368A821B8B1E50033E4B6 /* LocationMapViewController.swift */; };
+		CB3368AB21B8CE0A0033E4B6 /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3368AA21B8CE0A0033E4B6 /* StudentData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +35,19 @@
 		CB33687B21B4984C0033E4B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB33687E21B4984C0033E4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB33688021B4984C0033E4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB33688921B4BAAD0033E4B6 /* InfoPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostViewController.swift; sourceTree = "<group>"; };
+		CB33688921B4BAAD0033E4B6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		CB33688B21B4BAD60033E4B6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CB33688D21B4BB8C0033E4B6 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		CB33689121B4BDC40033E4B6 /* ParseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		CB33689321B4BDCF0033E4B6 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
-		CB33689821B5FBB70033E4B6 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
+		CB33689821B5FBB70033E4B6 /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
 		CB33689B21B600C70033E4B6 /* ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResponse.swift; sourceTree = "<group>"; };
 		CB3368A021B634B30033E4B6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResults.swift; sourceTree = "<group>"; };
 		CB3368A421B751890033E4B6 /* UdacityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityResponse.swift; sourceTree = "<group>"; };
+		CB3368A621B8A8380033E4B6 /* LocationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFormViewController.swift; sourceTree = "<group>"; };
+		CB3368A821B8B1E50033E4B6 /* LocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
+		CB3368AA21B8CE0A0033E4B6 /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				CB33687621B4984B0033E4B6 /* LoginViewController.swift */,
-				CB33688921B4BAAD0033E4B6 /* InfoPostViewController.swift */,
+				CB33688921B4BAAD0033E4B6 /* ListViewController.swift */,
 				CB33688B21B4BAD60033E4B6 /* MapViewController.swift */,
 				CB33688D21B4BB8C0033E4B6 /* StudentsTableViewController.swift */,
+				CB3368A621B8A8380033E4B6 /* LocationFormViewController.swift */,
+				CB3368A821B8B1E50033E4B6 /* LocationMapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		CB33689721B5FB9B0033E4B6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CB3368AA21B8CE0A0033E4B6 /* StudentData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -143,7 +152,7 @@
 		CB33689A21B5FCAC0033E4B6 /* Parse Responses */ = {
 			isa = PBXGroup;
 			children = (
-				CB33689821B5FBB70033E4B6 /* StudentLocation.swift */,
+				CB33689821B5FBB70033E4B6 /* StudentInformation.swift */,
 				CB33689B21B600C70033E4B6 /* ParseResponse.swift */,
 				CB3368A221B74AA50033E4B6 /* StudentLocationResults.swift */,
 			);
@@ -229,11 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB33689921B5FBB70033E4B6 /* StudentLocation.swift in Sources */,
+				CB33689921B5FBB70033E4B6 /* StudentInformation.swift in Sources */,
 				CB33689221B4BDC40033E4B6 /* ParseClient.swift in Sources */,
 				CB33687721B4984B0033E4B6 /* LoginViewController.swift in Sources */,
-				CB33688A21B4BAAD0033E4B6 /* InfoPostViewController.swift in Sources */,
+				CB3368AB21B8CE0A0033E4B6 /* StudentData.swift in Sources */,
+				CB33688A21B4BAAD0033E4B6 /* ListViewController.swift in Sources */,
+				CB3368A921B8B1E50033E4B6 /* LocationMapViewController.swift in Sources */,
 				CB33689C21B600C70033E4B6 /* ParseResponse.swift in Sources */,
+				CB3368A721B8A8380033E4B6 /* LocationFormViewController.swift in Sources */,
 				CB3368A121B634B30033E4B6 /* UIViewController+Alert.swift in Sources */,
 				CB33687521B4984B0033E4B6 /* AppDelegate.swift in Sources */,
 				CB33688E21B4BB8C0033E4B6 /* StudentsTableViewController.swift in Sources */,

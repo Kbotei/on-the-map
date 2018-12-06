@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ParseClient { //: NetworkClient {
+class ParseClient {
     static let applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
     static let apiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
     
@@ -24,7 +24,7 @@ class ParseClient { //: NetworkClient {
             case .createLocation:
                 return Endpoints.base + "/StudentLocation"
             case .studentLocations:
-                return Endpoints.base + "/StudentLocation?limit=100"
+                return Endpoints.base + "/StudentLocation?order=-updatedAt&limit=100"
             case .updateLocation(let objectId):
                 return Endpoints.base + "/StudentLocation/\(objectId)"
             }
@@ -35,9 +35,10 @@ class ParseClient { //: NetworkClient {
     
     // MARK - Network Requests
     
-    class func getStudentLocations(completion: @escaping ([StudentLocation], Error?) -> Void) {
+    class func getStudentLocations(completion: @escaping ([StudentInformation], Error?) -> Void) {
         let task = getRequest(url: Endpoints.studentLocations.url, responseType: StudentLocationResults.self) { data, error in
             if let data = data {
+                StudentData.locations = data.results
                 completion(data.results, nil)
             } else {
                 completion([], error)
@@ -47,10 +48,10 @@ class ParseClient { //: NetworkClient {
         task.resume()
     }
     
-    class func createStudentLocation(location: StudentLocation, completion: @escaping (Bool, Error?) -> Void) {
-        postRequest(url: Endpoints.createLocation.url, responseType: StudentLocation.self, body: location) { response, error in
+    class func createStudentLocation(location: StudentInformation, completion: @escaping (Bool, Error?) -> Void) {
+        postRequest(url: Endpoints.createLocation.url, responseType: StudentInformation.self, body: location) { response, error in
             if let response = response {
-                completion(!response.objectId.isEmpty, nil)
+                completion(!response.objectId!.isEmpty, nil)
             } else {
                 completion(false, error)
             }
@@ -74,8 +75,6 @@ class ParseClient { //: NetworkClient {
                 }
                 return
             }
-            
-             print(String(data: data, encoding: .utf8)!)
             
             let decoder = JSONDecoder()
             do {

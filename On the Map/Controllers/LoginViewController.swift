@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func login(_ sender: Any) {
         guard let user = email.text, let password = password.text else {
-            showAlert("Login Error", message: "Please enter an email/username and password.")
+            showAlert(Alerts.GeneralError, message: Alerts.LoginEmptyMessage)
             return
         }
         
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
             [weak self] response, error in
             
             guard error == nil else {
-                self?.showAlert("Login Error", message: error?.localizedDescription)
+                self?.showAlert(Alerts.GeneralError, message: error?.localizedDescription)
                 return
             }
             
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     @IBAction func signUp(_ sender: Any) {
         guard let url = URL(string: "https://www.udacity.com/account/auth#!/signup"),
             UIApplication.shared.canOpenURL(url) else {
-                showAlert("Error", message: "Unable to open signup link")
+                showAlert(Alerts.GeneralError, message: Alerts.SignupLinkMessage)
                 return
         }
         
