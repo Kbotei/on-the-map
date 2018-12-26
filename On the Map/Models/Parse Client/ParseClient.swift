@@ -9,8 +9,8 @@
 import Foundation
 
 class ParseClient {
-    static let applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
-    static let apiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+    static let applicationId = "APPID"
+    static let apiKey = "APIKEY"
     
     enum Endpoints {
         static let base = "https://parse.udacity.com/parse/classes"
